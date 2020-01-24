@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="Payload Hex Data"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editPayload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".01"
+                android:gravity="top|left"
+                android:hint="Message"
+                android:minLines="4"
+                android:text="1C-06-03-BE-AF-84-8C-82-98-%s-00-8D-90-89-0E-80-%s-00-96-%s-00-8A-82-8E-02-%s-88-05-81-03-09-3A-80-83-%s-00"
+                android:textSize="8dp"
+                android:visibility="gone"
+                tools:visibility="gone" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextWapPushNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="Enter Number"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/imgBtnContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"
+                android:text="Message Type"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"
+                android:text="Sms Port"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/imgBtnContact"
+                android:layout_toLeftOf="@+id/imgBtnContact"
+                android:layout_weight="0.1"
+                android:gravity="top|left|center_vertical"
+                android:text=""
+                android:textSize="8sp"
+                android:visibility="gone"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/spinnerWapPush"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:entries="@array/wappush_values" />
+
+            <Spinner
+                android:id="@+id/spinnerWapPort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:entries="@array/wappush_ports" />
+
+            <EditText
+                android:id="@+id/editSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="FFAA"
+                android:visibility="gone" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/imgBtnContact"
+                android:layout_toLeftOf="@+id/imgBtnContact"
+                android:layout_weight="0.1"
+                android:gravity="top|left|center_vertical"
+                android:hint="Title"
+                android:textSize="8sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/imgBtnContact"
+                android:layout_toLeftOf="@+id/imgBtnContact"
+                android:layout_weight="0.1"
+                android:gravity="top|left"
+                android:hint="Your Message"
+                android:minLines="3"
+                android:textSize="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnSendWapPush"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Send Payload"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scrollViewWapPush"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <TextView
+                    android:id="@+id/tvResultWapPush"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="8dp" />
+            </ScrollView>
+        </TableRow>
+
+    </TableLayout>
+
+
+</android.support.constraint.ConstraintLayout>

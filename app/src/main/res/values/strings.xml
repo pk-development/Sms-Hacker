@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Sms Hacker</string>
+    <string name="tab_text_1">Newbie</string>
+    <string name="tab_text_2">Expert</string>
+    <string name="tab_expert2">Hacker</string>
+    <string name="tab_text_3">AT</string>
+    <string name="tab_text_4">Gsm Sniffer</string>
+    <string name="tab_help">Help</string>
+
+<!--    <string name="sl">dc0605-b0-af82b48302066a00850903696465762e69652f746573742e706e67000501</string>-->
+    <string name="sl">1c0603beaf848c829882772721008d90890e80536d73204861636b65720096576f726b696e67f09f918d008a828e02ffff88058103093a8083746573742e636f6d2f696d672e706e6700</string>
+    <string-array name="wappush_values">
+        <item>Fake Sms</item>
+        <item>Ping</item>
+        <!--<item>Custom Bytes</item> -->
+    </string-array>
+
+    <string-array name="msg_types">
+        <item>Flash</item>
+        <item>Voice Mail</item>
+        <item>Normal</item>
+        <item>Type 0</item>
+    </string-array>
+
+    <string-array name="wappush_ports">
+        <item>0x0B84</item>
+        <item>9200</item>
+        <item>0x0B81</item>
+        <item>0x0B82</item>
+        <item>0x0B83</item>
+        <item>0x0B85</item>
+    </string-array>
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linarlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:measureWithLargestChild="true"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".ui.main.PlaceholderFragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/expertTableType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Type"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerSmsType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:entries="@array/msg_types"
+                android:minHeight="35dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/expertTablePort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Port"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editExpPort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="top|left|center_vertical"
+                android:text="/dev/smd0"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/experTableContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextExpNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:hint="Enter Number"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/btnExpContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editExpMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="top|left"
+                android:hint="Type your message here..."
+                android:minLines="3"
+                android:textSize="12sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:id="@+id/btnSendGsm"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_gsm_target"
+                android:layout_alignLeft="@+id/edit_gsm_target"
+                android:layout_weight=".05"
+                android:text="Send"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btnClearGsm"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/edit_gsm_target"
+                android:layout_alignLeft="@+id/edit_gsm_target"
+                android:layout_weight=".05"
+                android:text="Clear"
+                android:textSize="12dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Switch
+                android:id="@+id/switchRawPdu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Raw PDU String" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </TableLayout>
+
+</LinearLayout>

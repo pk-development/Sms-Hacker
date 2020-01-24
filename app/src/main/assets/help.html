@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<img src="img/evilicon.png" style="width:200px;height:200px"/>
+<h1 style="color:red">WARNING</h1>
+<p style="color:red">Do not use this application for malicious purposes. If you damage your phone or another persons phone I take no responsibility.
+    This app was designed for security researchers to find vulnerabilities related to sms</p>
+<p style="color:blue">
+    I make <b>NO</b> guarantee that this app will work on your device. <b>Hacker & AT</b> require root access and are very powerful compared to <b>Newbie node</b>
+    <br>
+    <br>
+    <b>Expert & Hacker</b> modes are only for people that spend the time to research PDU sms and AT commands. Chances are if you seen an exploit that uses PDU sms this app can send the payload
+    if your device allows it<br><br>
+   </p>
+<h2>Newbie Mode</h2>
+<h3>Fake Sms</h3>
+<p>This option allows you to send a wap push sms in PDU format. This will show up on the users device as if it came from whatever name you put in the header. So if you entered Update a message will appear in the users sms inbox from <b>Update</b>. Your number will not be displayed to the user, headers are limited to 18 characters and the body is limited to 88 characters. Very good for pranking your friends;-D</p>
+
+<h3>Ping</h3>
+<p>This option allows you to send a silent text message to a users phone and it will alert you if the phone is online. The user will not see this message on their phone.</p>
+
+<h3>Custom Bytes</h3>
+<p>This option allows you to send your own payload in PDU format. Requires advanced knowledge of building PDU sms and limited compared to <b>Expert Mode</b><br>------------------------</p>
+
+<h2>Expert Mode</h2>
+<p>This section gives you full access to the payload that is getting sent.
+    Google wap push PDU sms if you want to find information on how to build a particular type of wap push msg. <br/><br/>
+    <b>-</b> and <b>spaces</b> will be removed from the hex payload and are only there to make payload more readable.
+    </p>
+<h2>Hacker Mode</h2>
+<p style="color:red"><b>Warning : requires rooted device</b><br> You will not get a delivery report for these messages when sent. you can use adb to view the logcat of your device to see what is sent/received<br><br>
+    make sure usb debugging is enabled on your device and you have adb tools installed then use the following commands<br>
+    <b>adb shell<br>
+        logcat -b radio</b></p>
+<p style="color:red">
+    <b>Note</b> about which port the use in /dev folder, a lot of android phones use ports labeled <b>smd</b> so you will have to connect your device by usb and use adb to list the ports<br><br>
+    <b>ls /dev |grep smd</b><br><br>
+    Some of these ports will not work and you will have to try a lot of them to see will they work. What I do is go to expert mode and send a normal type sms to my own number then I know that this port is working. Or if you go to <b>AT</b> section and open a port then select ATI and send, if you get back a response this port is working.
+</p>
+
+<h3>Flash</h3>
+<p>This option allows you to send a flash sms this will display on the users phone in a message dialog (Sender will be shown on some devices)</p>
+
+<h3>Voice Mail</h3>
+<p>This option allows you to send a Voice Mail Waiting Indication message to the users phone. It doesn't really do anything but annoying to the user because they cannot remove the icon</p>
+
+<h3>Normal</h3>
+<p>
+    Just sends a normal sms through the modem
+    <br></p>
+
+<h3>Type 0 or Type Zero</h3>
+<p>
+    This sms type is used by the certain organisations to keep a users device active for tracking purposes and cannot be seen by the user.
+</p>
+<h3>Send Raw PDU String</h3>
+<p>
+    Probably the most powerful option if you know how to craft a raw PDU sms. In theory you can send any type of sms using this option and if you are a security researcher this would be your tool of choice to find vulnerabilities. This is a PDU in raw format so the number you selected has nothing to do with this option. Google search is your friend for this option.
+    <br>------------------------</p>
+
+<br>
+<h2>AT Mode</h2>
+
+<p>
+    This section is not related to SMS but allows you to send any AT command to the modem. This is called Hacker mode because users that use tools like <a href="http://github.com/ptrkrysik/gr-gsm">gr-gsm</a> and airprobe need an Encryption Key to decrypt GSM traffic which can be then viewed in wireshark. Getting the Encryption Key is very hit and miss and I've managed to get it on a Sony ST26i. Again I repeat these sections are only for advanced users that know what they are doing and what commands to use.
+    <br>------------------------</p>
+</body>
+</html>
