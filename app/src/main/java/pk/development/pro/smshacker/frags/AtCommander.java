@@ -115,11 +115,10 @@ public class AtCommander extends Fragment {
         });
 
 
-        mHandler = new Handler()
-        {
-            @Override
-            public void handleMessage(Message msg) {
+        mHandler = new Handler(new Handler.Callback(){
 
+            @Override
+            public boolean handleMessage(Message msg) {
                 switch (msg.what) {
                     case Constants.ERROR_OPENING_PORT:
                         atCmdLog.append(msg.obj.toString() + "\n");
@@ -131,9 +130,9 @@ public class AtCommander extends Fragment {
 
                         break;
                 }
-
+                return false;
             }
-        };
+        });
 
 
         atCmdOpen.setOnClickListener(new View.OnClickListener() {
