@@ -55,7 +55,7 @@ public class ExpertFrag extends Fragment {
                 expertTableType.setVisibility(isChecked ? View.GONE : View.VISIBLE);
                 expertTablePort.setVisibility(isChecked ? View.GONE : View.VISIBLE);
                 experTableContact.setVisibility(isChecked ? View.GONE : View.VISIBLE);
-                editExpMsg.setHint(isChecked ? "1231232131232131" : "Type your message here....");
+                editExpMsg.setHint(isChecked ? "00112233445566" : "Type your message here....");
             }
         });
 
