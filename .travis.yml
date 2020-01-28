@@ -12,4 +12,6 @@ android:
 before_install:
   - chmod +x gradlew
 
-    # Additional components
+notifications:
+  email:
+    - 17244412@studentmail.ul.ie
